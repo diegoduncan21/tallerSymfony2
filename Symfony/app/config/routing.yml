@@ -1,0 +1,5 @@
+taller_curso:
+    resource: "@TallerCursoBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
