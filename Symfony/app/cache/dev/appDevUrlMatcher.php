@@ -301,6 +301,15 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
 
         }
 
+        // taller_curso_inicio_inicio
+        if (rtrim($pathinfo, '/') === '') {
+            if (substr($pathinfo, -1) !== '/') {
+                return $this->redirect($pathinfo.'/', 'taller_curso_inicio_inicio');
+            }
+
+            return array (  '_controller' => 'Taller\\Bundle\\CursoBundle\\Controller\\InicioController::inicioAction',  '_route' => 'taller_curso_inicio_inicio',);
+        }
+
         if (0 === strpos($pathinfo, '/materia')) {
             // materia
             if (rtrim($pathinfo, '/') === '/materia') {

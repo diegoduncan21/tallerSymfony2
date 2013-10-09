@@ -1,0 +1,27 @@
+{% extends "::base.html.twig" %}
+
+{% block title %}Taller{% endblock %}
+
+{% block body %}
+
+	<nav>
+		<ul>
+			<li>
+				<a href="{{ path('alumno_create') }}">
+	                Alumno
+	            </a>
+			</li>
+			<li>
+				<a href="{{ path('curso_new') }}">
+	                Curso
+	            </a>
+			</li>
+			<li>
+				<a href="{{ path('materia_new') }}">
+	                Materia
+	            </a>
+			</li>
+		</ul>
+	</nav>
+
+{% endblock %}
